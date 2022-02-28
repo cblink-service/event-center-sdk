@@ -1,0 +1,19 @@
+{
+    "name": "cblink-service/event-notify-sdk",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick",
+            "email": "me@xieying.vip"
+        }
+    ],
+    "require": {
+        "cblink/hyperf-helper": "^0.1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Clink\\Service\\EventNotify\\": "src"
+        }
+    }
+}
