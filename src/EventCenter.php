@@ -1,6 +1,6 @@
 <?php
 
-namespace Clink\Service\EventNotify;
+namespace Cblink\Service\EventCenter;
 
 use Closure;
 use Cblink\HyperfExt\Tools\Aes;

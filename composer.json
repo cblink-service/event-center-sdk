@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Clink\\Service\\EventNotify\\": "src"
+            "Cblink\\Service\\EventCenter\\": "src"
         }
     }
 }

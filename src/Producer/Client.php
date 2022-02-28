@@ -1,6 +1,6 @@
 <?php
 
-namespace Clink\Service\EventNotify\Producer;
+namespace Cblink\Service\EventCenter\Producer;
 
 use Cblink\HyperfExt\Tools\Aes;
 use Cblink\Service\Foundation\BaseApi;
