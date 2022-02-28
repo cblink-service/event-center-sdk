@@ -13,7 +13,7 @@ use Hyperf\Utils\Collection;
  *
  * @property-read Producer\Client $producer
  */
-class EventCenter extends Container
+class Application extends Container
 {
     protected array $providers = [
         Producer\ServiceProvider::class,
