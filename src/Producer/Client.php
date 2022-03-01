@@ -15,7 +15,7 @@ class Client extends BaseApi
      * @param $type
      * @param $appid
      * @param $data
-     * @return array|\Psr\Http\Message\ResponseInterface|string|void
+     * @return array|\Psr\Http\Message\ResponseInterface|string
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Throwable
      */

@@ -28,7 +28,7 @@ class Application extends Container
      * @param $type
      * @param $appid
      * @param $data
-     * @return void
+     * @return array|\Psr\Http\Message\ResponseInterface|string
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Throwable
      */
