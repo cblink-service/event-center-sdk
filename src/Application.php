@@ -2,7 +2,9 @@
 
 namespace Cblink\Service\EventCenter;
 
+use Clink\Service\EventNotify\Kernel\MessageDto;
 use Closure;
+use InvalidArgumentException;
 use Cblink\HyperfExt\Tools\Aes;
 use Cblink\Service\Foundation\Container;
 use Hyperf\Utils\Collection;
@@ -47,9 +49,9 @@ class Application extends Container
     {
         $message = Aes::decode($data, $this->config['public_key']);
 
-        throw_if(empty($message));
+        throw_if(empty($message), InvalidArgumentException::class, 'Decryption failed.');
 
-        return call_user_func_array($closure, ['message' => $message]);
+        return call_user_func_array($closure, ['message' => new MessageDto($message)]);
     }
 
 
