@@ -9,7 +9,6 @@
         }
     ],
     "require": {
-        "cblink/hyperf-helper": "^0.1.4",
         "cblink/laravel-dto": "^2.0",
         "cblink-service/foundation": "^1.1"
     },
