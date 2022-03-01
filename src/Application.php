@@ -46,7 +46,7 @@ class Application extends Container
      */
     public function consumer(Closure $closure, array $data)
     {
-        throw_if($this->verifySign($data), InvalidArgumentException::class, 'Decryption failed.');
+        throw_unless($this->verifySign($data), InvalidArgumentException::class, 'Decryption failed.');
 
         return call_user_func($closure, [new MessageDto($data)]);
     }
