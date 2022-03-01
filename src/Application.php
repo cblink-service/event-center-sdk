@@ -51,7 +51,7 @@ class Application extends Container
 
         throw_if(empty($message), InvalidArgumentException::class, 'Decryption failed.');
 
-        return call_user_func_array($closure, ['message' => new MessageDto($message)]);
+        return call_user_func($closure, [new MessageDto($message)]);
     }
 
 
