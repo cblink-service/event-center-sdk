@@ -3,7 +3,7 @@
 namespace Cblink\Service\EventCenter;
 
 use Cblink\Service\Foundation\Container;
-use Clink\Service\EventCenter\Kernel\MessageDto;
+use Cblink\Service\EventCenter\Kernel\MessageDto;
 use Closure;
 use InvalidArgumentException;
 use Hyperf\Utils\Collection;
