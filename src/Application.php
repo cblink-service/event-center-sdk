@@ -48,7 +48,7 @@ class Application extends Container
     {
         throw_unless($this->verifySign($data), InvalidArgumentException::class, 'Decryption failed.');
 
-        return call_user_func($closure, [new MessageDto($data)]);
+        return call_user_func_array($closure, [new MessageDto($data)]);
     }
 
     /**
