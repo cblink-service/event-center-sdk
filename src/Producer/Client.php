@@ -2,12 +2,14 @@
 
 namespace Cblink\Service\EventCenter\Producer;
 
-use Cblink\HyperfExt\Tools\Aes;
+use Cblink\Service\EventCenter\Application;
 use Cblink\Service\Foundation\BaseApi;
 
+/**
+ * @property Application $app
+ */
 class Client extends BaseApi
 {
-
     /**
      * 投递消息
      *
@@ -21,9 +23,11 @@ class Client extends BaseApi
      */
     public function push($topic, $type, $appid, $data)
     {
-        return $this->httpPost('/producer', [
-            'producer' => Aes::encode(compact('topic', 'type', 'appid', 'data'), $this->app->config['private_key'])
-        ]);
+        $payload = compact('topic', 'type', 'appid', 'data');
+
+        $payload['sign'] = $this->app->buildSign($payload);
+
+        return $this->httpPost('/producer', $payload);
     }
 
 }

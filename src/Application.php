@@ -41,18 +41,37 @@ class Application extends Container
      * 消费消息
      *
      * @param Closure $closure
-     * @param string $data
+     * @param array $data
      * @return false|mixed
      * @throws \Throwable
      */
-    public function consumer(Closure $closure, string $data)
+    public function consumer(Closure $closure, array $data)
     {
-        $message = Aes::decode($data, $this->config['public_key']);
+        throw_if($this->verifySign($data), InvalidArgumentException::class, 'Decryption failed.');
 
-        throw_if(empty($message), InvalidArgumentException::class, 'Decryption failed.');
-
-        return call_user_func($closure, [new MessageDto($message)]);
+        return call_user_func($closure, [new MessageDto($data)]);
     }
 
+    /**
+     * @param array $payload
+     * @return string
+     */
+    public function buildSign(array $payload): string
+    {
+        ksort($payload);
 
+        return hash_hmac('sha1', serialize($payload), md5($this->config['public_key']));
+    }
+
+    /**
+     * @param array $payload
+     * @return bool
+     */
+    public function verifySign(array $payload): bool
+    {
+        $sign = $payload['sign'] ?? '';
+        unset($payload['sign']);
+
+        return $this->buildSign($payload) == $sign;
+    }
 }
