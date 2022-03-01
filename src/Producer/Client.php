@@ -22,7 +22,7 @@ class Client extends BaseApi
     public function push($topic, $type, $appid, $data)
     {
         return $this->httpPost('/producer', [
-            'data' => Aes::encode(compact('topic', 'type', 'appid', 'data'), $this->app->config['private_key'])
+            'producer' => Aes::encode(compact('topic', 'type', 'appid', 'data'), $this->app->config['private_key'])
         ]);
     }
 
