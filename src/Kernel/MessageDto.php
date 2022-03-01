@@ -1,6 +1,6 @@
 <?php
 
-namespace Clink\Service\EventNotify\Kernel;
+namespace Clink\Service\EventCenter\Kernel;
 
 use Cblink\HyperfExt\Dto;
 
