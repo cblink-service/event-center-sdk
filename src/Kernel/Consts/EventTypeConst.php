@@ -14,7 +14,12 @@ class EventTypeConst
     public const ORDER_CONFIRM = 'order.confirm';
     public const ORDER_REFUND = 'order.refund';
     public const ORDER_REFUND_AGREE = 'order.refund.agree';
-    public const ORDER_REFUND_REJECT = 'order.refund.reject';
+    public const ORDER_REFUND_REFUSE = 'order.refund.refuse';
+    public const ORDER_REFUND_CANCEL = 'order.refund.cancel';
+    public const ORDER_REFUND_CONFIRM = 'order.refund.confirm';
+    public const ORDER_REFUND_REFUND = 'order.refund.refund';
+    public const ORDER_REFUND_REFUNDED = 'order.refund.refunded';
+    public const ORDER_REFUND_TRANSPORT = 'order.refund.transport';
 
     public const ORDER = [
         self::ANY => '所有事件',
@@ -25,7 +30,12 @@ class EventTypeConst
         self::ORDER_CONFIRM => '确认收货',
         self::ORDER_REFUND => '申请退款',
         self::ORDER_REFUND_AGREE => '同意退款',
-        self::ORDER_REFUND_REJECT => '拒绝退款',
+        self::ORDER_REFUND_REFUSE => '拒绝退款',
+        self::ORDER_REFUND_CANCEL => '取消退单',
+        self::ORDER_REFUND_CONFIRM => '确认收货',
+        self::ORDER_REFUND_REFUND => '发起退款',
+        self::ORDER_REFUND_REFUNDED => '退款完成',
+        self::ORDER_REFUND_TRANSPORT => '货物退回',
     ];
 
     // 操作事件
