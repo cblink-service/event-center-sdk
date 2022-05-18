@@ -42,19 +42,27 @@ class EventTypeConst
     public const USER_CREATED = 'user.created';
     public const USER_UPDATED = 'user.updated';
     public const USER_COMPANY_CREATED = 'company.created';
-    public const USER_COMPANY_JOIN = 'company.join';
-    public const USER_COMPANY_LEAVE = 'company.leave';
+    public const USER_COMPANY_UPDATED = 'company.updated';
+    public const USER_MEMBER_CREATED = 'member.created';
+    public const USER_MEMBER_UPDATED = 'member.updated';
+    public const USER_MEMBER_DESTROY = 'member.destroy';
+    public const USER_MEMBER_DISABLE = 'member.disable';
     public const USER_DEPARTMENT_CREATED = 'department.created';
     public const USER_DEPARTMENT_UPDATED = 'department.updated';
+    public const USER_DEPARTMENT_DESTROY = 'department.destroy';
 
     public const USER = [
         self::ANY => '所有事件',
         self::USER_CREATED => '用户创建',
         self::USER_UPDATED => '用户修改',
         self::USER_COMPANY_CREATED => '企业创建',
-        self::USER_COMPANY_JOIN => '加入企业',
-        self::USER_COMPANY_LEAVE => '离开企业',
+        self::USER_COMPANY_UPDATED => '企业编辑',
+        self::USER_MEMBER_CREATED => '创建成员',
+        self::USER_MEMBER_UPDATED => '修改成员',
+        self::USER_MEMBER_DESTROY => '删除成员',
+        self::USER_MEMBER_DISABLE => '禁用/启用成员',
         self::USER_DEPARTMENT_CREATED => '部门创建',
         self::USER_DEPARTMENT_UPDATED => '部门修改',
+        self::USER_DEPARTMENT_DESTROY => '部门删除',
     ];
 }
