@@ -13,6 +13,9 @@ class EventTypeConst
     public const ORDER_TRANSPORT = 'order.transport';
     public const ORDER_CONFIRM = 'order.confirm';
     public const ORDER_REFUND = 'order.refund';
+    public const ORDER_RECEIVE = 'order.receive';
+    public const ORDER_DINING = 'order.dining';
+    public const ORDER_MAKE_MEAL = 'order.make-meal';
     public const ORDER_REFUND_AGREE = 'order.refund.agree';
     public const ORDER_REFUND_REFUSE = 'order.refund.refuse';
     public const ORDER_REFUND_CANCEL = 'order.refund.cancel';
@@ -20,6 +23,7 @@ class EventTypeConst
     public const ORDER_REFUND_REFUND = 'order.refund.refund';
     public const ORDER_REFUND_REFUNDED = 'order.refund.refunded';
     public const ORDER_REFUND_TRANSPORT = 'order.refund.transport';
+
 
     public const ORDER = [
         self::ANY => '所有事件',
@@ -29,6 +33,9 @@ class EventTypeConst
         self::ORDER_TRANSPORT => '订单发货',
         self::ORDER_CONFIRM => '确认收货',
         self::ORDER_REFUND => '申请退款',
+        self::ORDER_RECEIVE => '商户接单',
+        self::ORDER_DINING => '商户出餐',
+        self::ORDER_MAKE_MEAL => '商户取餐',
         self::ORDER_REFUND_AGREE => '同意退款',
         self::ORDER_REFUND_REFUSE => '拒绝退款',
         self::ORDER_REFUND_CANCEL => '取消退单',
