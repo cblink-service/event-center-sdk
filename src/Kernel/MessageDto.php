@@ -29,7 +29,7 @@ class MessageDto extends Dto
     public function getData($key = null, $default = null) :array
     {
         if (empty($this->data) && is_string($this->getItem('data'))) {
-            $this->data = json_decode($this->getItem('data'), true);
+            $this->data = json_decode(base64_decode($this->getItem('data')), true);
         }
 
         if ($key) {

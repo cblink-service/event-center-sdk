@@ -22,7 +22,7 @@ class Client extends BaseApi
      */
     public function push(string $topic, string $type, string $appid, array $data = [])
     {
-        $data = json_encode($data, 512);
+        $data = base64_encode(json_encode($data, 512));
 
         $payload = compact('topic', 'type', 'appid', 'data');
 
