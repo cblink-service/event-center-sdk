@@ -23,6 +23,10 @@ class Client extends BaseApi
      */
     public function push($topic, $type, $appid, $data)
     {
+        if (is_array($data)) {
+            $data = serialize($data);
+        }
+
         $payload = compact('topic', 'type', 'appid', 'data');
 
         $payload['sign'] = $this->app->buildSign($payload);
