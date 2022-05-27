@@ -13,19 +13,16 @@ class Client extends BaseApi
     /**
      * 投递消息
      *
-     * @param $topic
-     * @param $type
-     * @param $appid
-     * @param $data
+     * @param string $topic
+     * @param string $type
+     * @param string $appid
+     * @param array $data
      * @return array|\Psr\Http\Message\ResponseInterface|string
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @throws \Throwable
      */
-    public function push($topic, $type, $appid, $data)
+    public function push(string $topic, string $type, string $appid, array $data = [])
     {
-        if (is_array($data)) {
-            $data = serialize($data);
-        }
+        $data = json_encode($data, 512);
 
         $payload = compact('topic', 'type', 'appid', 'data');
 

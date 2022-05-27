@@ -24,7 +24,7 @@ class MessageDto extends Dto
     public function getData() :array
     {
         if (empty($this->data) && is_string($this->getItem('data'))) {
-            $this->data = unserialize($this->getItem('data'));
+            $this->data = json_decode($this->getItem('data'), true);
         }
 
         return $this->data;
