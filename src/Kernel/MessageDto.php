@@ -24,9 +24,9 @@ class MessageDto extends Dto
      *
      * @param null $key
      * @param null $default
-     * @return array
+     * @return array|string
      */
-    public function getData($key = null, $default = null) :array
+    public function getData($key = null, $default = null)
     {
         if (empty($this->data) && is_string($this->getItem('data'))) {
             $this->data = json_decode(base64_decode($this->getItem('data')), true);
