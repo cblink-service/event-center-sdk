@@ -6,7 +6,7 @@
 ## Installing
 
 ```shell
-$ composer require cblink-service/event-notify-sdk -vvv
+$ composer require cblink-service/event-center-sdk -vvv
 ```
 
 ## Usage
