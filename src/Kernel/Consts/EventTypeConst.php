@@ -72,4 +72,9 @@ class EventTypeConst
         self::USER_DEPARTMENT_UPDATED => '部门修改',
         self::USER_DEPARTMENT_DESTROY => '部门删除',
     ];
+
+    public const LOW_CODE_RELEASE = 'low.code.release';
+    public const LOW_CODE = [
+        self::LOW_CODE_RELEASE => '装修发布'
+    ];
 }
