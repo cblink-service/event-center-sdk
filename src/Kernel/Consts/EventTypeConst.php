@@ -23,7 +23,7 @@ class EventTypeConst
     public const ORDER_REFUND_REFUND = 'order.refund.refund';
     public const ORDER_REFUND_REFUNDED = 'order.refund.refunded';
     public const ORDER_REFUND_TRANSPORT = 'order.refund.transport';
-
+    public const ORDER_REFUND_REFUND_RETRY = 'order.refund.refund.retry';
 
     public const ORDER = [
         self::ANY => '所有事件',
@@ -43,6 +43,7 @@ class EventTypeConst
         self::ORDER_REFUND_REFUND => '发起退款',
         self::ORDER_REFUND_REFUNDED => '退款完成',
         self::ORDER_REFUND_TRANSPORT => '货物退回',
+        self::ORDER_REFUND_REFUND_RETRY => '重试退款',
     ];
 
     // 操作事件
