@@ -16,6 +16,7 @@ class EventTypeConst
     public const ORDER_RECEIVE = 'order.receive';
     public const ORDER_DINING = 'order.dining';
     public const ORDER_TAKE_MEAL = 'order.take-meal';
+    public const ORDER_REFUNDED = 'order.refunded';
     public const ORDER_REFUND_AGREE = 'order.refund.agree';
     public const ORDER_REFUND_REFUSE = 'order.refund.refuse';
     public const ORDER_REFUND_CANCEL = 'order.refund.cancel';
@@ -36,6 +37,7 @@ class EventTypeConst
         self::ORDER_RECEIVE => '商户接单',
         self::ORDER_DINING => '商户出餐',
         self::ORDER_TAKE_MEAL => '商户取餐',
+        self::ORDER_REFUNDED => '订单完成退款',
         self::ORDER_REFUND_AGREE => '同意退款',
         self::ORDER_REFUND_REFUSE => '拒绝退款',
         self::ORDER_REFUND_CANCEL => '取消退单',
