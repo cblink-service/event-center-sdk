@@ -21,17 +21,4 @@ class Client extends BaseApi
     {
         return $this->httpPost('/api/app', $payload);
     }
-
-    /**
-     * 应用信息
-     *
-     * @param array $payload
-     * @return array|\Psr\Http\Message\ResponseInterface|string
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function info(array $payload = [])
-    {
-        return $this->httpGet('/api/app', $payload);
-    }
-
 }

@@ -35,6 +35,22 @@ class Client extends BaseRequestApi
     }
 
     /**
+     * 应用信息
+     *
+     * @param array $payload
+     * @return array|\Psr\Http\Message\ResponseInterface|string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function info($appid)
+    {
+        $payload = ['appid' => $appid, 'created_at' => time()];
+
+        $payload['sign'] = $this->buildSign($payload);
+
+        return $this->httpGet('/app', $payload);
+    }
+
+    /**
      * 消费消息
      *
      * @param Closure $closure
