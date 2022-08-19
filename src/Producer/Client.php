@@ -43,7 +43,7 @@ class Client extends BaseRequestApi
      */
     public function info($appid)
     {
-        $payload = ['appid' => $appid, 'created_at' => time()];
+        $payload = ['appid' => $appid, 'created_at' => (string) time()];
 
         $payload['sign'] = $this->buildSign($payload);
 
