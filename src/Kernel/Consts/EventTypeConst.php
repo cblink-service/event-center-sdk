@@ -80,4 +80,10 @@ class EventTypeConst
     public const LOW_CODE = [
         self::LOW_CODE_RELEASE => '装修发布'
     ];
+
+    // 配送门店配置
+    public const SHOP_DELIVERY_STATUS = 'shop.delivery.status';
+    public const SHOP_DELIVERY = [
+        self::SHOP_DELIVERY_STATUS => '配送门店审核状态变更'
+    ];
 }

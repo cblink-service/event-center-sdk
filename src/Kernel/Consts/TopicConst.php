@@ -9,11 +9,13 @@ class TopicConst
     public const ORDER = 'order';
     public const USER = 'user';
     public const LOW_CODE = 'low_code';
+    public const SHOP_DELIVERY = 'shop_delivery';
 
     public const TOPIC = [
         self::ORDER => '订单',
         self::USER => '用户',
         self::LOW_CODE => '低代码',
+        self::SHOP_DELIVERY => '门店配送',
     ];
 
     public const TYPE = [
@@ -31,6 +33,11 @@ class TopicConst
             'name' => '低代码',
             'topic' => self::LOW_CODE,
             'types' => EventTypeConst::LOW_CODE,
+        ],
+        self::SHOP_DELIVERY => [
+            'name' => '门店配送',
+            'topic' => self::SHOP_DELIVERY,
+            'types' => EventTypeConst::SHOP_DELIVERY,
         ],
     ];
 }
