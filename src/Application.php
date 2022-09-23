@@ -2,21 +2,24 @@
 
 namespace Cblink\Service\EventCenter;
 
+use Cblink\Service\Foundation\AccessToken;
 use Cblink\Service\Foundation\Container;
-use Cblink\Service\EventCenter\Kernel\MessageDto;
 use Closure;
-use InvalidArgumentException;
 use Hyperf\Utils\Collection;
 
 /**
  * @property-read Collection $config
  * @property-read \GuzzleHttp\Client $client
+ * @property-read AccessToken $access_token
  *
  * @property-read Producer\Client $producer
+ * @property-read App\Client $app
  */
 class Application extends Container
 {
     protected array $providers = [
+        Kernel\AccessTokenServiceProvider::class,
+        App\ServiceProvider::class,
         Producer\ServiceProvider::class,
     ];
 
@@ -46,31 +49,6 @@ class Application extends Container
      */
     public function consumer(Closure $closure, array $data)
     {
-        throw_unless($this->verifySign($data), InvalidArgumentException::class, 'Decryption failed.');
-
-        return call_user_func_array($closure, [new MessageDto($data)]);
-    }
-
-    /**
-     * @param array $payload
-     * @return string
-     */
-    public function buildSign(array $payload): string
-    {
-        ksort($payload);
-
-        return hash_hmac('sha1', serialize($payload), md5($this->config['public_key']));
-    }
-
-    /**
-     * @param array $payload
-     * @return bool
-     */
-    public function verifySign(array $payload): bool
-    {
-        $sign = $payload['sign'] ?? '';
-        unset($payload['sign']);
-
-        return $this->buildSign($payload) == $sign;
+        return $this->producer->consumer($closure, $data);
     }
 }
