@@ -78,6 +78,7 @@ class EventTypeConst
 
     public const LOW_CODE_RELEASE = 'low.code.release';
     public const LOW_CODE = [
+        self::ANY => '所有事件',
         self::LOW_CODE_RELEASE => '装修发布'
     ];
 
@@ -90,6 +91,7 @@ class EventTypeConst
     public const SHOP_DELIVERY_ORDER_STATUS_CANCEL = 'shop.delivery.order.status.cancel';
     public const SHOP_DELIVERY_ORDER_STATUS_EXCEPTION = 'shop.delivery.order.status.exception';
     public const SHOP_DELIVERY = [
+        self::ANY => '所有事件',
         self::SHOP_DELIVERY_STATUS => '配送门店审核状态变更',
         self::SHOP_DELIVERY_ORDER_STATUS_CREATE => '门店配送订单创建',
         self::SHOP_DELIVERY_ORDER_STATUS_ORDER => '门店配送订单已接单',
