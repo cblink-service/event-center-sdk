@@ -33,7 +33,7 @@ class TopicConst
         self::PARTY => [
             'name' => '组织架构',
             'topic' => self::PARTY,
-            'types' => EventTypeConst::USER,
+            'types' => EventTypeConst::PARTY,
         ],
         self::LOW_CODE => [
             'name' => '低代码',
