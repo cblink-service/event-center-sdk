@@ -52,9 +52,17 @@ class EventTypeConst
         self::ORDER_TRANSPORT_CHANGE => '物流单改变',
     ];
 
-    // 操作事件
+    // 用户事件
     public const USER_CREATED = 'user.created';
     public const USER_UPDATED = 'user.updated';
+
+    public const USER = [
+        self::ANY => '所有事件',
+        self::USER_CREATED => '用户创建',
+        self::USER_UPDATED => '用户修改',
+    ];
+
+    // 组织架构
     public const USER_COMPANY_CREATED = 'company.created';
     public const USER_COMPANY_UPDATED = 'company.updated';
     public const USER_MEMBER_CREATED = 'member.created';
@@ -65,10 +73,7 @@ class EventTypeConst
     public const USER_DEPARTMENT_UPDATED = 'department.updated';
     public const USER_DEPARTMENT_DESTROY = 'department.destroy';
 
-    public const USER = [
-        self::ANY => '所有事件',
-        self::USER_CREATED => '用户创建',
-        self::USER_UPDATED => '用户修改',
+    public const PARTY = [
         self::USER_COMPANY_CREATED => '企业创建',
         self::USER_COMPANY_UPDATED => '企业编辑',
         self::USER_MEMBER_CREATED => '创建成员',

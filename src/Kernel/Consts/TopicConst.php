@@ -8,6 +8,7 @@ class TopicConst
 {
     public const ORDER = 'order';
     public const USER = 'user';
+    public const PARTY = 'party';
     public const LOW_CODE = 'low_code';
     public const SHOP_DELIVERY = 'shop_delivery';
 
@@ -27,6 +28,11 @@ class TopicConst
         self::USER => [
             'name' => '用户',
             'topic' => self::USER,
+            'types' => EventTypeConst::USER,
+        ],
+        self::PARTY => [
+            'name' => '组织架构',
+            'topic' => self::PARTY,
             'types' => EventTypeConst::USER,
         ],
         self::LOW_CODE => [
