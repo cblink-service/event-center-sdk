@@ -15,6 +15,7 @@ class TopicConst
     public const TOPIC = [
         self::ORDER => '订单',
         self::USER => '用户',
+        self::PARTY => '组织架构',
         self::LOW_CODE => '低代码',
         self::SHOP_DELIVERY => '门店配送',
     ];
