@@ -74,6 +74,7 @@ class EventTypeConst
     public const USER_DEPARTMENT_DESTROY = 'department.destroy';
 
     public const PARTY = [
+        self::ANY => '所有事件',
         self::USER_COMPANY_CREATED => '企业创建',
         self::USER_COMPANY_UPDATED => '企业编辑',
         self::USER_MEMBER_CREATED => '创建成员',
