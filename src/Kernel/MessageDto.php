@@ -2,6 +2,7 @@
 
 namespace Cblink\Service\EventCenter\Kernel;
 
+use Closure;
 use Cblink\HyperfExt\Dto;
 use Hyperf\Utils\Arr;
 
@@ -37,5 +38,28 @@ class MessageDto extends Dto
         }
 
         return $this->data;
+    }
+
+    /**
+     * 回调处理
+     *
+     * @param Closure|array $closure
+     * @param string $topic
+     * @param array $type
+     * @return mixed|void
+     */
+    public function callback($closure, string $topic, array $type = [])
+    {
+        // 不匹配topic
+        if ($this->getData('topic') != $topic) {
+            return;
+        }
+
+        // 如果type为空则默认所有type，如果有值需要验证是否包含在内
+        if (!empty($type) && !in_array($this->getData('type'), $type)) {
+            return;
+        }
+
+        return call_user_func_array($closure, [$this]);
     }
 }
