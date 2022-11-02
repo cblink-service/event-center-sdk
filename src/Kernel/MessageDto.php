@@ -51,12 +51,12 @@ class MessageDto extends Dto
     public function callback($closure, string $topic, array $type = [])
     {
         // 不匹配topic
-        if ($this->getData('topic') != $topic) {
+        if ($this->getItem('topic') != $topic) {
             return;
         }
 
         // 如果type为空则默认所有type，如果有值需要验证是否包含在内
-        if (!empty($type) && !in_array($this->getData('type'), $type)) {
+        if (!empty($type) && !in_array($this->getItem('type'), $type)) {
             return;
         }
 
