@@ -11,6 +11,7 @@ class TopicConst
     public const PARTY = 'party';
     public const LOW_CODE = 'low_code';
     public const SHOP_DELIVERY = 'shop_delivery';
+    public const SALESMAN = 'salesman';
 
     public const TOPIC = [
         self::ORDER => '订单',
@@ -18,6 +19,7 @@ class TopicConst
         self::PARTY => '组织架构',
         self::LOW_CODE => '低代码',
         self::SHOP_DELIVERY => '门店配送',
+        self::SALESMAN => '分销',
     ];
 
     public const TYPE = [
@@ -45,6 +47,11 @@ class TopicConst
             'name' => '门店配送',
             'topic' => self::SHOP_DELIVERY,
             'types' => EventTypeConst::SHOP_DELIVERY,
+        ],
+        self::SALESMAN => [
+            'name' => '分销',
+            'topic' => self::SALESMAN,
+            'types' => EventTypeConst::SALESMAN,
         ],
     ];
 }
