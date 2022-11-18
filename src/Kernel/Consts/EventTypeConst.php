@@ -111,12 +111,13 @@ class EventTypeConst
         self::SHOP_DELIVERY_ORDER_STATUS_EXCEPTION => '门店配送订单异常',
     ];
 
-    public const SALESMAN_WITHDRAWAL_APPLY = 'salesman_withdrawal_apply';
-    public const SALESMAN_WITHDRAWAL_PASS = 'salesman_withdrawal_pass';
-    public const SALESMAN_WITHDRAWAL_REFUSE = 'salesman_withdrawal_refuse';
-    public const SALESMAN_WITHDRAWAL_COMPLETE = 'salesman_withdrawal_complete';
-    public const SALESMAN_WITHDRAWAL_FAIL = 'salesman_withdrawal_fail';
+    public const SALESMAN_WITHDRAWAL_APPLY = 'salesman.withdrawal.apply';
+    public const SALESMAN_WITHDRAWAL_PASS = 'salesman.withdrawal.pass';
+    public const SALESMAN_WITHDRAWAL_REFUSE = 'salesman.withdrawal.refuse';
+    public const SALESMAN_WITHDRAWAL_COMPLETE = 'salesman.withdrawal.complete';
+    public const SALESMAN_WITHDRAWAL_FAIL = 'salesman.withdrawal.fail';
     public const SALESMAN = [
+        self::ANY => '所有事件',
         self::SALESMAN_WITHDRAWAL_APPLY => '分销提现-申请',
         self::SALESMAN_WITHDRAWAL_PASS => '分销提现-通过审核',
         self::SALESMAN_WITHDRAWAL_REFUSE => '分销提现-拒绝',
