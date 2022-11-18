@@ -90,7 +90,6 @@ class EventTypeConst
     public const SHOP_DELIVERY_ORDER_STATUS_SUCCESS = 'shop.delivery.order.status.success';
     public const SHOP_DELIVERY_ORDER_STATUS_CANCEL = 'shop.delivery.order.status.cancel';
     public const SHOP_DELIVERY_ORDER_STATUS_EXCEPTION = 'shop.delivery.order.status.exception';
-    public const SHOP_DELIVERY_ORDER_ALL_EXCEPTION = 'shop.delivery.order.all.cancel';
     public const SHOP_DELIVERY = [
         self::ANY => '所有事件',
         self::SHOP_DELIVERY_STATUS => '配送门店审核状态变更',
@@ -100,6 +99,18 @@ class EventTypeConst
         self::SHOP_DELIVERY_ORDER_STATUS_SUCCESS => '门店配送订单已送达',
         self::SHOP_DELIVERY_ORDER_STATUS_CANCEL => '门店配送订单已取消',
         self::SHOP_DELIVERY_ORDER_STATUS_EXCEPTION => '门店配送订单异常',
-        self::SHOP_DELIVERY_ORDER_ALL_EXCEPTION => '门店订单全部取消',
+    ];
+
+    public const SALESMAN_WITHDRAWAL_APPLY = 'salesman_withdrawal_apply';
+    public const SALESMAN_WITHDRAWAL_PASS = 'salesman_withdrawal_pass';
+    public const SALESMAN_WITHDRAWAL_REFUSE = 'salesman_withdrawal_refuse';
+    public const SALESMAN_WITHDRAWAL_COMPLETE = 'salesman_withdrawal_complete';
+    public const SALESMAN_WITHDRAWAL_FAIL = 'salesman_withdrawal_fail';
+    public const SALESMAN = [
+        self::SALESMAN_WITHDRAWAL_APPLY => '分销提现-申请',
+        self::SALESMAN_WITHDRAWAL_PASS => '分销提现-通过审核',
+        self::SALESMAN_WITHDRAWAL_REFUSE => '分销提现-拒绝',
+        self::SALESMAN_WITHDRAWAL_COMPLETE => '分销提现-完成',
+        self::SALESMAN_WITHDRAWAL_FAIL => '分销提现-失败'
     ];
 }
