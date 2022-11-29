@@ -25,6 +25,8 @@ class EventTypeConst
     public const ORDER_REFUND_REFUNDED = 'order.refund.refunded';
     public const ORDER_REFUND_TRANSPORT = 'order.refund.transport';
     public const ORDER_REFUND_REFUND_RETRY = 'order.refund.refund.retry';
+    public const ORDER_TRANSPORT_CREATE = 'order.transport.create';
+    public const ORDER_TRANSPORT_CHANGE = 'order.transport.change';
 
     public const ORDER = [
         self::ANY => '所有事件',
@@ -46,12 +48,23 @@ class EventTypeConst
         self::ORDER_REFUND_REFUNDED => '退款完成',
         self::ORDER_REFUND_TRANSPORT => '货物退回',
         self::ORDER_REFUND_REFUND_RETRY => '重试退款',
+        self::ORDER_TRANSPORT_CREATE => '物流单创建',
+        self::ORDER_TRANSPORT_CHANGE => '物流单改变',
     ];
 
-    // 操作事件
+    // 用户事件
     public const USER_CREATED = 'user.created';
     public const USER_UPDATED = 'user.updated';
     public const USER_ACCOUNT_UPDATED = 'user.account.updated';
+
+    public const USER = [
+        self::ANY => '所有事件',
+        self::USER_CREATED => '用户创建',
+        self::USER_UPDATED => '用户修改',
+        self::USER_ACCOUNT_UPDATED => '用户修改账户',
+    ];
+
+    // 组织架构
     public const USER_COMPANY_CREATED = 'company.created';
     public const USER_COMPANY_UPDATED = 'company.updated';
     public const USER_MEMBER_CREATED = 'member.created';
@@ -62,11 +75,8 @@ class EventTypeConst
     public const USER_DEPARTMENT_UPDATED = 'department.updated';
     public const USER_DEPARTMENT_DESTROY = 'department.destroy';
 
-    public const USER = [
+    public const PARTY = [
         self::ANY => '所有事件',
-        self::USER_CREATED => '用户创建',
-        self::USER_UPDATED => '用户修改',
-        self::USER_ACCOUNT_UPDATED => '用户修改账户',
         self::USER_COMPANY_CREATED => '企业创建',
         self::USER_COMPANY_UPDATED => '企业编辑',
         self::USER_MEMBER_CREATED => '创建成员',
