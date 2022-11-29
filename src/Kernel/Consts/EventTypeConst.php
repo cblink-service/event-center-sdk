@@ -55,11 +55,13 @@ class EventTypeConst
     // 用户事件
     public const USER_CREATED = 'user.created';
     public const USER_UPDATED = 'user.updated';
+    public const USER_ACCOUNT_UPDATED = 'user.account.updated';
 
     public const USER = [
         self::ANY => '所有事件',
         self::USER_CREATED => '用户创建',
         self::USER_UPDATED => '用户修改',
+        self::USER_ACCOUNT_UPDATED => '用户修改账户',
     ];
 
     // 组织架构
