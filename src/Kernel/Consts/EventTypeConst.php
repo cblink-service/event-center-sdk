@@ -51,6 +51,7 @@ class EventTypeConst
     // 操作事件
     public const USER_CREATED = 'user.created';
     public const USER_UPDATED = 'user.updated';
+    public const USER_ACCOUNT_UPDATED = 'user.account.updated';
     public const USER_COMPANY_CREATED = 'company.created';
     public const USER_COMPANY_UPDATED = 'company.updated';
     public const USER_MEMBER_CREATED = 'member.created';
@@ -65,6 +66,7 @@ class EventTypeConst
         self::ANY => '所有事件',
         self::USER_CREATED => '用户创建',
         self::USER_UPDATED => '用户修改',
+        self::USER_ACCOUNT_UPDATED => '用户修改账户',
         self::USER_COMPANY_CREATED => '企业创建',
         self::USER_COMPANY_UPDATED => '企业编辑',
         self::USER_MEMBER_CREATED => '创建成员',
