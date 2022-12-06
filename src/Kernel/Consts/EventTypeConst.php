@@ -57,7 +57,7 @@ class EventTypeConst
     public const USER_UPDATED = 'user.updated';
     public const USER_ACCOUNT_UPDATED = 'user.account.updated';
     public const USER_LOGIN = 'user.login';
-    public const USER_MEMBER_UPGRADE= 'user.member.level.upgrade';
+    public const USER_MEMBER_LEVEL_UPGRADE= 'user.member.level.upgrade';
 
     public const USER = [
         self::ANY => '所有事件',
@@ -65,7 +65,7 @@ class EventTypeConst
         self::USER_UPDATED => '用户修改',
         self::USER_ACCOUNT_UPDATED => '用户修改账户',
         self::USER_LOGIN => '用户登陆',
-        self::USER_MEMBER_UPGRADE => '用户会员等级升级'
+        self::USER_MEMBER_LEVEL_UPGRADE => '用户会员等级升级'
     ];
 
     // 组织架构
