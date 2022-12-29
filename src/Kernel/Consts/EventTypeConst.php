@@ -130,4 +130,12 @@ class EventTypeConst
         self::SALESMAN_WITHDRAWAL_COMPLETE => '分销提现-完成',
         self::SALESMAN_WITHDRAWAL_FAIL => '分销提现-失败'
     ];
+
+
+    public const PRODUCT_SKU_BATCH_UPDATE = 'product.sku.batch-update';
+    public const PRODUCT = [
+        self::ANY => '所有事件',
+        self::PRODUCT_SKU_BATCH_UPDATE => '批量更新SKU',
+
+    ];
 }
