@@ -133,9 +133,11 @@ class EventTypeConst
 
 
     public const PRODUCT_SKU_BATCH_UPDATE = 'product.sku.batch-update';
+    public const PRODUCT_UPDATE = 'product.update';
     public const PRODUCT = [
         self::ANY => '所有事件',
         self::PRODUCT_SKU_BATCH_UPDATE => '批量更新SKU',
+        self::PRODUCT_UPDATE => '商品编辑',
 
     ];
 }
