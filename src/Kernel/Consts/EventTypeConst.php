@@ -117,6 +117,7 @@ class EventTypeConst
         self::SHOP_DELIVERY_ORDER_STATUS_EXCEPTION => '门店配送订单异常',
     ];
 
+    // 分销功能
     public const SALESMAN_CREATE = 'salesman.create';
     public const SALESMAN_WITHDRAWAL_APPLY = 'salesman.withdrawal.apply';
     public const SALESMAN_WITHDRAWAL_PASS = 'salesman.withdrawal.pass';
@@ -126,13 +127,13 @@ class EventTypeConst
     public const SALESMAN_BALANCE_UPDATE = 'salesman.balance.update';
     public const SALESMAN = [
         self::ANY => '所有事件',
-        self::SALESMAN_CREATE=>'创建分销员',
-        self::SALESMAN_BALANCE_UPDATE =>'分销员余额变更',
-        self::SALESMAN_WITHDRAWAL_APPLY => '分销提现-申请',
-        self::SALESMAN_WITHDRAWAL_PASS => '分销提现-通过审核',
-        self::SALESMAN_WITHDRAWAL_REFUSE => '分销提现-拒绝',
-        self::SALESMAN_WITHDRAWAL_COMPLETE => '分销提现-完成',
-        self::SALESMAN_WITHDRAWAL_FAIL => '分销提现-失败',
+        self::SALESMAN_CREATE=>'分销员创建',
+        self::SALESMAN_BALANCE_UPDATE =>'余额变更',
+        self::SALESMAN_WITHDRAWAL_APPLY => '提现申请',
+        self::SALESMAN_WITHDRAWAL_PASS => '通过提现审核',
+        self::SALESMAN_WITHDRAWAL_REFUSE => '拒绝提现审核',
+        self::SALESMAN_WITHDRAWAL_COMPLETE => '提现成功',
+        self::SALESMAN_WITHDRAWAL_FAIL => '提现失败',
     ];
 
 
